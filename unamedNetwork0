@@ -1,0 +1,10 @@
+Head 0
+|Pune,0,0,Panvel||Panvel,110,0,Lonavala||Lonavala,65,0,NULL|
+Head 1
+|Lonavala,0,0,Mumbai||Mumbai,85,1,Pune||Pune,65,0,NULL|
+Head 2
+|Mumbai,0,0,Panvel||Panvel,35,0,Thane||Thane,20,0,Lonavala||Lonavala,85,1,NULL|
+Head 3
+|Panvel,0,0,Thane||Thane,50,0,Mumbai||Mumbai,35,0,Pune||Pune,110,0,NULL|
+Head 4
+|Thane,0,0,Panvel||Panvel,50,0,Mumbai||Mumbai,20,0,NULL|
