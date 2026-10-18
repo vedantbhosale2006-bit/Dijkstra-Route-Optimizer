@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script {
                     def awsRegion = "ap-south-1"
-                    def ecrRepoUri = "118308531168.dkr.ecr.ap-south-1.amazonaws.com/cplusplus-router" // Replace with your actual ECR URI
+                    def ecrRepoUri = "118308531168.dkr.ecr.ap-south-1.amazonaws.com/cplusplus-router"
                     sh "aws ecr get-login-password --region ${awsRegion} | docker login --username AWS --password-stdin ${ecrRepoUri.split('/')[0]}"
                     sh "docker tag cplusplus-router:latest ${ecrRepoUri}:latest"
                     sh "docker push ${ecrRepoUri}:latest"
@@ -50,8 +50,8 @@ pipeline {
             steps {
                 script {
                     sh 'minikube image load cplusplus-router:latest || true'
-                    sh 'kubectl apply -f k8s/deployment.yaml'
-                    sh 'kubectl apply -f k8s/service.yaml'
+                    sh 'kubectl apply --validate=false -f k8s/deployment.yaml'
+                    sh 'kubectl apply --validate=false -f k8s/service.yaml'
                 }
             }
         }
