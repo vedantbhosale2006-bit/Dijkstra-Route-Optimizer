@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cplusplus-router-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cplusplus-router
+  template:
+    metadata:
+      labels:
+        app: cplusplus-router
+    spec:
+      containers:
+      - name: router
+        image: 118308531168.dkr.ecr.ap-south-1.amazonaws.com/cplusplus-router:latest
+        imagePullPolicy: Always
