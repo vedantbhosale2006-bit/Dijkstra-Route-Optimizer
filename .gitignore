@@ -1,0 +1,10 @@
+# Compiled executables
+*.exe
+*.out
+dijkstra
+dijkstra.exe
+
+# Object and cache files
+*.o
+*.obj
+.DS_Store
